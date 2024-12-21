@@ -1,6 +1,0 @@
-Create new table:
-Create database: "bookstore"
-table: "books";  column="5"
-
-Columns:
-Name: "id"(primary, AI), Title, Author, Genre, Description
