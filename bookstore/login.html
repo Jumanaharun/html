@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<title>Login Form</title>
+</head>
+<body>
+	<div class="form-container">
+		<h1 align="center">Log in</h1>
+	<form action="data_save.php" method="post">
+		<table align="center" cellpadding="10">
+			<div class="form-group">
+				<tr>
+			<label for="email">Email </label>
+            <input type="email" id="email" name="email" required>
+		</tr>
+			</div>
+
+			<div class="form-group">
+				<tr>
+			<label for="pw">Password</label>
+            <input type="password" id="pw" name="password" required>
+		</tr>
+			</div>
+
+			<div class="form-group">
+        	<button type="submit" id="submit-btn" >Submit</button>
+				<button type="reset" id="submit-btn">Cancel</button>
+        </div>
+
+		</table>
+		
+	</form>
+
+	</div>
+	
+</body>
+</html>
