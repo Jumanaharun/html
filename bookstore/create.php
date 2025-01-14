@@ -21,13 +21,13 @@
 					<tr>
 					<td>Title</td>
 					<td>
-						<input type="text" class="form-control" name="title" placeholder="Enter the title of the book.">
+						<input type="text" class="form-control" name="title" placeholder="Enter the title of the book." required>
 					</td>
 				</tr>
 
 				<tr>
 					<td>Author</td>
-					<td><input type="text" class="form-control" name="author" placeholder="Enter the name of the author.">
+					<td><input type="text" class="form-control" name="author" placeholder="Enter the name of the author." required>
 					</td>
 						
 				</tr>
@@ -35,7 +35,7 @@
 				<tr>
 					<td>Genre</td>
 					<td>
-						<select name="genre">
+						<select name="genre" required>
 							<option>Adventure</option>
 							<option>Crime</option>
 							<option>Comedy</option>
@@ -49,14 +49,14 @@
 				<tr>
 					<td>Book Description</td>
 					<td>
-						<input type="text" class="form-control" name="description" placeholder="Enter the description of the book.">
+						<input type="text" class="form-control" name="description" placeholder="Enter the description of the book." required>
 					</td>
 						
 				</tr>
 					
 				</table>
 
-				<input type="submit" name="submit_button" value="submit">
+				<input type="submit" name="create" value="submit">
 				
 			</div>
 			

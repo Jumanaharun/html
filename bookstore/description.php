@@ -16,15 +16,14 @@
 	<div>
 		<?php
 		//isset checks whether the value is null or not; we get the partcular is of the //book using get
-		if (isset($_GET['ID'])) {
-			$id_rec=$_GET['ID']; //keep the obtained id in a new var, here 'id_rec'
+		if (isset($_GET['Title'])) {
+			$id_rec=$_GET['Title']; //keep the obtained id in a new var, here 'id_rec'
 			include("database_connect.php");
-			$sql = "SELECT * FROM books WHERE ID=$id_rec";
+			$sql = "SELECT * FROM books WHERE Title=$id_rec";
 			$result= mysqli_query($con, $sql); //make connection to database
-			$row= mysqli_fetch_array() //convert result into array, since only one obj is grabbed,no while loop needed
+			$row= mysqli_fetch_array($result); //convert result into array, since only one obj is grabbed,no while loop needed
 			?>
-
-			//html code
+ 
 			<h2>Title</h2>
 			<p> <?php echo $row["Title"]; ?> </p>
 			<h2>Desciption</h2>

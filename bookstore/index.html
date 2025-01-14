@@ -42,29 +42,48 @@
 		</div>
 	</nav>
 
+	<div class="main">
+		<div class="main_tag">
+			<h1>Welcome to<br><span>BookStore</span></h1>
+			<p>
+				Case Closed, also known as Detective Conan, is a Japanese detective manga series written and illustrated by Gosho Aoyama. It has been serialized in Shogakukan's shōnen manga magazine Weekly Shōnen Sunday since January 1994; its chapters are collected in 106 tankōbon volumes as of October 2024.
+			</p>
+
+		</div>
+	
+	</div>
+
 </body>
 </html>
 
 <script>
-	// Example of a user login status check
-	// Replace this with your actual authentication logic
-	const isLoggedIn = false; // Set to `true` if the user is logged in
+    // Simulate a user login status for demonstration purposes (use backend logic for real-world use)
+    const isLoggedIn = <?php echo isset($_SESSION['user_id']) ? 'true' : 'false'; ?>;
+    const isAdmin = <?php echo isset($_SESSION['is_admin']) && $_SESSION['is_admin'] ? 'true' : 'false'; ?>;
 
-	document.addEventListener('DOMContentLoaded', () => {
-		// Select elements
-		const signinElement = document.querySelector('.nav__signin');
-		const profileElement = document.querySelector('.nav__profile');
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select elements
+        const signinElement = document.querySelector('.nav__signin');
+        const profileElement = document.querySelector('.nav__profile');
+        const adminPanelElement = document.querySelector('.nav__admin-panel');
 
-		// Toggle visibility based on login state
-		if (isLoggedIn) {
-			signinElement.style.display = 'none';
-			profileElement.style.display = 'block';
-		} else {
-			signinElement.style.display = 'block';
-			profileElement.style.display = 'none';
-		}
-	});
+        // Toggle visibility based on login state and role
+        if (isLoggedIn) {
+            signinElement.style.display = 'none';
+            profileElement.style.display = 'block';
+            if (isAdmin) {
+                adminPanelElement.style.display = 'block'; // Show Admin Panel link
+            } else {
+                adminPanelElement.style.display = 'none'; // Hide Admin Panel link
+            }
+        } else {
+            signinElement.style.display = 'block';
+            profileElement.style.display = 'none';
+            adminPanelElement.style.display = 'none';
+        }
+    });
 </script>
+
 
 
 <!--s4-->

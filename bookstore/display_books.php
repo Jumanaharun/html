@@ -44,9 +44,9 @@ $getdatafromtable = mysqli_query($con,"SELECT * FROM books");
  	<td><?php echo $row["Genre"]; ?></td>
 
  	<td>
- 		<a href="description.php">Read More</a>
- 		<a href="">Edit</a>
- 		<a href="">Delete</a>
+ 		<a href="description.php?ID=<?php echo $row["ID"]; ?>">Read More </a>
+ 		<a href="edit.php">Edit </a>
+ 		<a href="">Delete </a>
  	</td>
 
  </tr>

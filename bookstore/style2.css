@@ -3,6 +3,12 @@ body {
             background-color: skyblue;
         }
 
+.container{
+    width: 74%;
+    max-width: 1800px;
+    margin-inline: auto ;
+}
+
 .form-container {
             width: 50%;
             margin: 0 auto;
